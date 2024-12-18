@@ -9,6 +9,21 @@ import static org.junit.Assert.*;
 public class LinkedListDequeTest {
 
     @Test
+    public void getRecursiveTest() {
+        // Arrange
+        LinkedListDeque<String> list = new LinkedListDeque<>();
+        list.addLast("apple");
+        list.addLast("banana");
+        list.addLast("cherry");
+
+        // Act
+        String result = list.getRecursive(1); // Get the element at index 1
+
+        // Assert
+        assertEquals("banana", result);
+    }
+
+    @Test
     /** Adds a few things to the list, checking isEmpty() and size() are correct,
      * finally printing the results.
      *
